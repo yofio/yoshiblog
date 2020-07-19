@@ -1,0 +1,43 @@
+.header {
+  line-height: 100px;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+
+  position: sticky;
+  top: 0;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+
+  .header_title {
+    .title {
+      text-decoration: none;
+      color: inherit;
+      font-family: "Corben", cursive;
+      color: #4671fb;
+      font-size: 5rem;
+      font-weight: bold;
+      margin-left: 70px;
+    }
+  }
+
+  .lists {
+    display: flex;
+    margin-left: 100px;
+
+    .list {
+      margin-right: 40px;
+      color: #4671fb;
+      font-size: 20px;
+
+      .icon {
+        color: inherit;
+        color: #4671fb;
+      }
+
+      .post {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
