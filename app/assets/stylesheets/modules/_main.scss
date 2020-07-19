@@ -1,0 +1,48 @@
+main {
+  height: 100%;
+  background-color: white;
+
+  .wrapper {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 1000px;
+
+    background-color: #f5f5f5;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+
+    .article__contents {
+      margin: 0 auto;
+      width: 70%;
+      .article__contents__btn {
+        display: flex;
+        justify-content: flex-end;
+
+        .content__btn {
+          margin-right: 10px;
+          text-decoration: none;
+          color: inherit;
+          color: #4671fb;
+        }
+      }
+      .border {
+        margin-bottom: 30px;
+        position: relative;
+        height: 1px;
+        border-width: 0;
+        background-color: #00bcd4;
+        background-image: -webkit-linear-gradient(
+          left,
+          #00bcd4 0%,
+          #283593 50%,
+          #00bcd4 100%
+        );
+        background-image: linear-gradient(
+          90deg,
+          #00bcd4 0%,
+          #283593 50%,
+          #00bcd4 100%
+        );
+      }
+    }
+  }
+}

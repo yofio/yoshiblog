@@ -1,0 +1,38 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "application.css", :rel => "stylesheets"}/
+    %title YoshiBlog
+
+  %body
+    .header
+      .header_title
+        %a.title{:href => "/blogs"} YoshiBlog
+      %ul.lists
+        %li.list
+          = link_to "https://twitter.com" do
+            = fa_stacked_icon("twitter", base: "square-o", class:"icon")
+        %li.list 
+          = link_to "新規投稿", new_blog_path, class:"post"
+        %li.list 
+          = link_to "ログイン", login_path, class:"post"
+
+    %main
+      .wrapper
+        %article
+          .article__contents
+            - @blogs.each do |blog|
+              .article__contents__img
+                = image_tag src="#{blog.image}", size: "700x400", class:"picture"
+              .article__contents__title 
+                title:
+                = blog.title
+              .article__contents__btn
+                .article__contents__btn__edit
+                  = link_to 'Edit', edit_blog_path(blog), class:"content__btn"
+                .article__contents__btn__show
+                  = link_to 'Show', blog_path(blog), class:"content__btn"
+              %hr.border
+            

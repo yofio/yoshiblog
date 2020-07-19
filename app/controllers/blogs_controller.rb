@@ -24,6 +24,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
+
     @blog = Blog.new(blog_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :user_name, :user_id)
+      params.require(:blog).permit(:title, :body, :user_name, :user_id, :image, :remove_img, :content)
     end
 end
