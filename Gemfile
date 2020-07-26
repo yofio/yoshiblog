@@ -74,4 +74,3 @@ gem 'image_processing'
 
 gem 'devise'
 
-gem 'bcrypt'
