@@ -12,9 +12,9 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5 #<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: passward
   socket: /tmp/mysql.sock
 
 development:
@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: yoshiblog_production
-  username: yoshiblog
+  username: root
   password: <%= ENV['YOSHIBLOG_DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
